@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #025a5d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  position: relative;
+  width: 650px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.slideImg {
+  display: block;
+  width: 250px;
+  border-radius: 250px;
+  object-fit: cover;
+}
+
+.slide {
+  position: absolute;
+  transition: transform 0.3s;
+  opacity: 0.3s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.slideActive {
+  opacity: 1;
+  z-index: 4;
+}
+
+.slideNext {
+  z-index: 3;
+  opacity: 0.55;
+  transform: translate(80%);
+}
+
+.slidePrev {
+  z-index: 3;
+  opacity: 0.55;
+  transform: translate(-80%);
+}
+
+.sliderButtons {
+  position: absolute;
+  z-index: 5;
+  width: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ionIcon {
+  width: 100px;
+  height: 30px;
+  display: block;
+  color: white;
+}
+
+.sliderButton {
+  background-color: #121212;
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.4s;
+}
